@@ -8,7 +8,7 @@ After=network.target sound.target
 [Service]
 Restart=always
 RestartSec=10
-ExecStart=/usr/bin/librespot --name "%u@%H"
+ExecStart=/usr/bin/librespot --name raspberrypi -b 320 -c ./cache --enable-volume-normalisation --initial-volume 75 --device-type avr
 
 [Install]
 WantedBy=default.target
